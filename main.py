@@ -1,14 +1,16 @@
 import pygame, sys 
 from settings import *
+from level import Level
 
 class Game:
 
     def __init__(self):
         pygame.init () # Initialization
-        # Screen
+        # attributes
         self.screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
         pygame.display.set_caption('Yoga Surf Land')
         self.clock = pygame.time.Clock()
+        self.level = Level()
 
     def run(self):
         while True:
@@ -19,6 +21,7 @@ class Game:
                     sys.exit() # Close the game
 
             dt = self.clock.tick() / 1000 # datatime
+            self.level.run(dt)
             pygame.display.update()
 
 # Checking if we are in the main file
