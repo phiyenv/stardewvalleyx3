@@ -1,3 +1,7 @@
+"""
+'OVERLAY_POSITIONS' is a dictionary with keys 'tool' and 'seed' and values that are tuples of coordinates for the overlay 
+position on the screen.
+"""
 from pygame.math import Vector2
 # screen
 SCREEN_WIDTH = 1280
@@ -16,6 +20,9 @@ PLAYER_TOOL_OFFSET = {
 	'down': Vector2(0,50)
 }
 
+"""
+'LAYERS' is a dictionary with keys representing different types of layers in the game and values representing their order or priority.
+"""
 LAYERS = {
 	'water': 0,
 	'ground': 1,
@@ -30,22 +37,37 @@ LAYERS = {
 	'rain drops': 10
 }
 
+"""
+'APPLE_POS' is a dictionary that has keys 'Small' and 'Large' and values are list of tuple of coordinates of apples.
+"""
 APPLE_POS = {
 	'Small': [(18,17), (30,37), (12,50), (30,45), (20,30), (30,10)],
 	'Large': [(30,24), (60,65), (50,50), (16,40),(45,50), (42,70)]
 }
 
+"""
+'GROW_SPEED' is a dictionary that has keys 'corn' and 'tomato' and values are respective growth speed of the crops.
+"""
 GROW_SPEED = {
 	'corn': 1,
 	'tomato': 0.7
 }
 
+
+"""
+'SALE_PRICES' is a dictionary that has keys 'wood', 'apple', 'corn' and 'tomato' and values are respective sale prices.
+"""
 SALE_PRICES = {
 	'wood': 4,
 	'apple': 2,
 	'corn': 10,
 	'tomato': 20
 }
+
+
+"""
+'PURCHASE_PRICES' is a dictionary that has keys 'corn' and 'tomato' and values are respective purchase prices.
+"""
 PURCHASE_PRICES = {
 	'corn': 4,
 	'tomato': 5
